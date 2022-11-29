@@ -2,8 +2,8 @@ import 'package:booking_app/Hall%20Detail%20Screen/Componenets/hall_detail_card.
 import 'package:booking_app/Hall%20Detail%20Screen/Componenets/hall_detail_page_view.dart';
 import 'package:booking_app/Hall%20Detail%20Screen/Componenets/hall_rating.dart';
 import 'package:booking_app/Hall%20Detail%20Screen/Componenets/review_list.dart';
-import 'package:booking_app/custom_heading_text.dart';
-import 'package:booking_app/space_size_box.dart';
+import 'package:booking_app/Commons/custom_heading_text.dart';
+import 'package:booking_app/Commons/space_size_box.dart';
 import 'package:flutter/material.dart';
 
 class HallDetailPage extends StatefulWidget {
