@@ -1,5 +1,8 @@
+import 'package:booking_app/Favourite%20Screen/favourite_screen.dart';
+import 'package:booking_app/booking123/bookin_screen.dart';
+import 'package:booking_app/cart_screen/cart_screen.dart';
 import 'package:booking_app/home_screen1.dart';
-import 'package:flutter/gestures.dart';
+import 'package:booking_app/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_floating_bottom_bar/flutter_floating_bottom_bar.dart';
 
@@ -13,21 +16,25 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage>
     with SingleTickerProviderStateMixin {
-  late int currentPage;
+  late int currentPage = 0;
   late TabController tabController;
-  final List<Color> colors = [
+  List colors = [
     Colors.purple,
-    Colors.red,
-    Colors.green,
-    Colors.blue,
-    Colors.pink
-
+    Colors.purple,
+    Colors.purple,
+    Colors.purple,
+    Colors.purple,
+    // Colors.pink,
   ];
 
   @override
   void initState() {
     currentPage = 0;
-    tabController = TabController(length: 5, vsync: this);
+    tabController = TabController(
+      length: 5,
+      vsync: this,
+    );
+
     tabController.animation!.addListener(
       () {
         final value = tabController.animation!.value.round();
@@ -64,6 +71,7 @@ class _MyHomePageState extends State<MyHomePage>
         // ),
         body: BottomBar(
           child: TabBar(
+            physics: NeverScrollableScrollPhysics(),
             indicatorPadding: const EdgeInsets.fromLTRB(6, 0, 6, 0),
             controller: tabController,
             indicator: UnderlineTabIndicator(
@@ -79,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage>
                                     : currentPage == 4
                                         ? colors[4]
                                         : unselectedColor,
-                    width: 4),
+                    width: 5),
                 insets: EdgeInsets.fromLTRB(16, 0, 16, 8)),
             tabs: [
               SizedBox(
@@ -96,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage>
                 width: 40,
                 child: Center(
                     child: Icon(
-                  Icons.search,
+                  Icons.badge,
                   color: currentPage == 1 ? colors[1] : unselectedColor,
                 )),
               ),
@@ -105,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage>
                 width: 40,
                 child: Center(
                     child: Icon(
-                  Icons.add,
+                  Icons.favorite,
                   color: currentPage == 2 ? colors[2] : unselectedColor,
                 )),
               ),
@@ -114,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage>
                 width: 40,
                 child: Center(
                     child: Icon(
-                  Icons.favorite,
+                  Icons.card_travel,
                   color: currentPage == 3 ? colors[3] : unselectedColor,
                 )),
               ),
@@ -127,6 +135,15 @@ class _MyHomePageState extends State<MyHomePage>
                   color: currentPage == 4 ? colors[4] : unselectedColor,
                 )),
               ),
+              // SizedBox(
+              //   height: 55,
+              //   width: 40,
+              //   child: Center(
+              //       child: Icon(
+              //     Icons.person,
+              //     color: currentPage == 4 ? colors[4] : unselectedColor,
+              //   )),
+              // ),
             ],
           ),
           fit: StackFit.expand,
@@ -142,30 +159,38 @@ class _MyHomePageState extends State<MyHomePage>
           // ),
           borderRadius: BorderRadius.circular(500),
           duration: Duration(seconds: 1),
-          curve: Curves.decelerate,
+          // curve: Curves.decelerate,
           showIcon: true,
           width: MediaQuery.of(context).size.width * 0.8,
           barColor: colors[currentPage].computeLuminance() > 0.5
-              ? Color(0xffC9C6EF) 
+              ? Color(0xffC9C6EF)
               : Color(0xffC9C6EF),
+
           start: 2,
           end: 0,
           bottom: 10,
+
           alignment: Alignment.bottomCenter,
           iconHeight: 35,
           iconWidth: 35,
-          reverse: false,
-          hideOnScroll: true,
-          scrollOpposite: false,
+          // reverse: false,
+          // hideOnScroll: true,
+          // scrollOpposite: false,
           onBottomBarHidden: () {},
           onBottomBarShown: () {},
-          body: (context, controller) => HomeScreen()
-          // body: (context, controller) => TabBarView(
-          //   controller: tabController,
-          //   dragStartBehavior: DragStartBehavior.down,
-          //   physics: const BouncingScrollPhysics(),
-           
-          // ),
+
+          body: (context, controller) => TabBarView(
+            controller: tabController,
+            // dragStartBehavior: DragStartBehavior.down,
+            // physics: const BouncingScrollPhysics(),
+            children: [
+              HomeScreen(),
+              BookinScreen(),
+              FavouriteScreen(),
+              CartScreen(),
+              Settings(),
+            ],
+          ),
         ),
       ),
     );

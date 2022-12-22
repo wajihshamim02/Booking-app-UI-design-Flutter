@@ -1,0 +1,11 @@
+  Expanded(
+                  child: ListView.builder(
+                    itemCount: info.length,
+                    itemBuilder: ((context, index) {
+                      return HallItemContainer(
+                        textt: info[index]['message'].toString(),
+                        text3: '',
+                      );
+                    }),
+                  ),
+                ),

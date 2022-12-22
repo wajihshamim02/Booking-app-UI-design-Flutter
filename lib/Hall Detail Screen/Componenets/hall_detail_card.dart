@@ -23,7 +23,7 @@ class _HallDetailCardState extends State<HallDetailCard> {
               color: Colors.grey.withOpacity(0.3),
               spreadRadius: 2.0,
               blurRadius: 5.0,
-              offset: Offset(0, 3),
+              offset: const Offset(0, 3),
             )
           ]),
       child: Padding(
@@ -34,7 +34,7 @@ class _HallDetailCardState extends State<HallDetailCard> {
           children: [
             Text(
               widget.hall_name,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w700,
               ),
@@ -44,7 +44,7 @@ class _HallDetailCardState extends State<HallDetailCard> {
             ),
             Row(
               children: [
-                Icon(
+                const Icon(
                   Icons.location_on,
                   size: 14,
                   color: Colors.blueGrey,
@@ -63,39 +63,28 @@ class _HallDetailCardState extends State<HallDetailCard> {
             ),
             Row(
               children: [
-                // Text(
-                //   'Accomodation: 300-500',
-                //   //textAlign: TextAlign.right,
-                //   style: TextStyle(
-                //       fontSize: 12,
-                //       fontWeight: FontWeight.w100,
-                //       color: Colors.grey),
-                // ),
-                Spacer(),
-                Text(
+                const Spacer(),
+                const Text(
                   '8.1 Excellent',
-                  //textAlign: TextAlign.right,
                   style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w700,
-                      color: Color(0xff807AAD)),
+                      color: Color(0xff807AAD),),
                 ),
               ],
             ),
             Row(
               children: [
-                Text(
+                const Text(
                   'Accomodation: 300-500',
-                  //textAlign: TextAlign.right,
                   style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w100,
                       color: Colors.grey),
                 ),
-                Spacer(),
-                Text(
+                const Spacer(),
+                const Text(
                   '347 reviews',
-                  //textAlign: TextAlign.right,
                   style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w100,

@@ -39,7 +39,7 @@ class _HallItemContainerState extends State<HallItemContainer> {
                         topRight: Radius.circular(5),
                       ),
                       image: DecorationImage(
-                          image: AssetImage('assets/images/water1.jpg'),
+                          image: AssetImage('assets/images/hall_2.jpg'),
                           fit: BoxFit.cover)),
                 ),
                 Container(
@@ -85,7 +85,7 @@ class _HallItemContainerState extends State<HallItemContainer> {
                             ),
                             Container(
                               child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
                                     '\Rs 80',
@@ -121,7 +121,7 @@ class _HallItemContainerState extends State<HallItemContainer> {
                               color: Colors.red,
                             ),
                             SizedBox(
-                              width: MediaQuery.of(context).size.width * 0.002,
+                              width: MediaQuery.of(context).size.width * 0.005,
                             ),
                             Text(
                               '4/5 reviews',
@@ -140,21 +140,22 @@ class _HallItemContainerState extends State<HallItemContainer> {
           ),
         ),
         Positioned(
-            left: 270,
-            top: 190,
-            child: Container(
-              height: 60,
-              width: 100,
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      colors: [Color(0xff807AAD), Color(0xffC9C6EF)]),
-                  shape: BoxShape.circle),
-              child: Icon(
-                Icons.favorite_border_outlined,
-                color: Colors.white,
-                size: 30,
-              ),
-            )),
+          left: 270,
+          top: 190,
+          child: Container(
+            height: 60,
+            width: 100,
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    colors: [Color(0xff807AAD), Color(0xffC9C6EF)]),
+                shape: BoxShape.circle),
+            child: Icon(
+              Icons.favorite_border_outlined,
+              color: Colors.white,
+              size: 30,
+            ),
+          ),
+        ),
       ],
     );
   }

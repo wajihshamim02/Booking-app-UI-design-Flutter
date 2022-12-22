@@ -18,7 +18,7 @@ class _CustomRatingState extends State<CustomRating> {
           style: TextStyle(
               fontSize: 40,
               fontWeight: FontWeight.w700,
-              color: Color(0xff807AAD)),
+              color: Color(0xff807AAD),),
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -28,7 +28,7 @@ class _CustomRatingState extends State<CustomRating> {
               style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w700,
-                  color: Color(0xff807AAD)),
+                  color:Color(0xff807AAD),),
             ),
             Text(
               '347 reviews',

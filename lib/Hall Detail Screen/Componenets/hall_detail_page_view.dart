@@ -15,8 +15,6 @@ class _HallDetailPageViewState extends State<HallDetailPageView> {
       PageView.builder(
         itemBuilder: (context, position) {
           return Container(
-            // height: size.height * 0.4,
-            // width: double.infinity,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(30),

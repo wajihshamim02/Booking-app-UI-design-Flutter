@@ -1,4 +1,4 @@
-import 'package:booking_app/diff_project_code/hotel_search_screen.dart';
+// import 'package:booking_app/diff_project_code/hotel_search_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -58,7 +58,7 @@ class _CustomAppBarState extends State<mainCustomAppBar> {
                       ],
                     ),
                     const CircleAvatar(
-                      radius: 45,
+                      radius: 38,
                       backgroundColor: Color.fromARGB(255, 238, 238, 238),
                       backgroundImage:
                           AssetImage('assets/images/hall_icon.jpg'),
@@ -88,7 +88,7 @@ class _CustomAppBarState extends State<mainCustomAppBar> {
                 height: 52,
                 width: double.infinity,
                 child: InkWell(
-                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => HotelSearchScreen(),)),
+                  // onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => HotelSearchScreen(),)),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Row(

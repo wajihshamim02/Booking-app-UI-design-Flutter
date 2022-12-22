@@ -1,0 +1,8 @@
+1. Number Of Guests
+2. Wedding Date & Timing
+3. Proximity To Your Place Of Stay
+4. Available Transport Options
+5. Parking Space
+6. Catering
+7. Decor
+8. Bridal Rooms

@@ -1,3 +1,4 @@
+import 'package:booking_app/Hall%20Detail%20Screen/hall_detail_screen.dart';
 import 'package:booking_app/book_now.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +24,7 @@ class _SliderrState extends State<Sliderr> {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: ((context) => BookNow()),
+                  builder: ((context) => HallDetailPage()),
                 ));
           },
           child: Container(
