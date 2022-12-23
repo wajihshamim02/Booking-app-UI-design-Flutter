@@ -1,3 +1,4 @@
+import 'package:booking_app/Edit%20Profile%20Screen/components/DateContainer.dart';
 import 'package:booking_app/widgets/customTextfield.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +10,7 @@ class EditProfileScreen extends StatefulWidget {
 }
 
 class _EditProfileScreenState extends State<EditProfileScreen> {
-  DateTime date1 = DateTime(2000,02,13);
+  DateTime date1 = DateTime(2000, 02, 13);
   int gender = 0;
   @override
   Widget build(BuildContext context) {
@@ -198,7 +199,16 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                         SizedBox(
                           height: size.height * 0.02,
                         ),
-                        Text("${date1.day}-${date1.month}-${date1.year}",style: TextStyle(fontSize: 15),),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            
+                          DateContainer(datevalue: '${date1.day}',),
+                          DateContainer(datevalue: '${date1.month}',),
+                          DateContainer(datevalue: '${date1.year}',),
+                          
+                          ],
+                        ),
                         SizedBox(
                           height: size.height * 0.02,
                         ),
@@ -213,20 +223,18 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                                   return Theme(
                                     data: Theme.of(context).copyWith(
                                       colorScheme: ColorScheme.light(
-                                        primary:
-                                            Color(0xff7a71ad), 
+                                        primary: Color(0xff7a71ad),
                                       ),
-                                   
                                     ),
                                     child: child!,
                                   );
                                 });
 
                             if (datepicked != null) {
-                            //  print("Date Picked ${datepicked.day}-${datepicked.month}-${datepicked.year}");
-                             setState(() {
-                               date1  = datepicked;
-                             });
+                              //  print("Date Picked ${datepicked.day}-${datepicked.month}-${datepicked.year}");
+                              setState(() {
+                                date1 = datepicked;
+                              });
                             }
                           },
                           child: Container(
