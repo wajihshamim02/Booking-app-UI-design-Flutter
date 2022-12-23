@@ -16,7 +16,7 @@ class _SignInState extends State<signup> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage("assets/images/lightwater.jpg"),
           fit: BoxFit.cover,
@@ -41,7 +41,7 @@ class _SignInState extends State<signup> {
                       borderRadius: BorderRadius.circular(10), // radius of 10
                       color: Colors.white // green as background color
                       ),
-                  child: Icon(
+                  child: const Icon(
                     Icons.home,
                     size: 50,
                   ),
@@ -53,7 +53,7 @@ class _SignInState extends State<signup> {
               Padding(
                 padding: const EdgeInsets.only(left: 30),
                 child: Container(
-                  child: Text(
+                  child: const Text(
                     'Enjoy the trip \nwith me',
                     style: TextStyle(color: Colors.white, fontSize: 30),
                   ),

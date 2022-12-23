@@ -26,7 +26,7 @@ class _MyHomePageState extends State<MyHomePage>
     Colors.purple,
     // Colors.pink,
   ];
-
+  
   @override
   void initState() {
     currentPage = 0;

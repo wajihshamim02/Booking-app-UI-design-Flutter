@@ -1,4 +1,7 @@
 // import 'package:booking_app/diff_project_code/hotel_search_screen.dart';
+import 'package:booking_app/Hall%20Detail%20Screen/hall_detail_screen.dart';
+import 'package:booking_app/Halls%20items/hall-item_container.dart';
+import 'package:booking_app/Halls%20items/halls_item.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -88,7 +91,7 @@ class _CustomAppBarState extends State<mainCustomAppBar> {
                 height: 52,
                 width: double.infinity,
                 child: InkWell(
-                  // onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => HotelSearchScreen(),)),
+                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => HallsItem(),)),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Row(

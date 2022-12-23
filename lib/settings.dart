@@ -1,6 +1,7 @@
 // import 'dart:ffi';
 
 import 'package:booking_app/Commons/settings_container.dart';
+import 'package:booking_app/Edit%20Profile%20Screen/edit_profile_screen.dart';
 import 'package:flutter/material.dart';
 
 class Settings extends StatefulWidget {
@@ -75,12 +76,15 @@ class _SettingsState extends State<Settings> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SettingsContainer(
-                Icon_Settings: Icon(
-                  Icons.mobile_friendly,
-                  color: Colors.purple,
+              InkWell(
+                onTap: () => Navigator.push(context, MaterialPageRoute(builder: ((context) => const EditProfileScreen()))),
+                child: SettingsContainer(
+                  Icon_Settings: Icon(
+                    Icons.mobile_friendly,
+                    color: Colors.purple,
+                  ),
+                  Text_settings: 'Edit Profile',
                 ),
-                Text_settings: 'Appearance',
               ),
               SettingsContainer(
                 Icon_Settings: Icon(

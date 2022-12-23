@@ -1,9 +1,11 @@
+import 'package:booking_app/Edit%20Profile%20Screen/edit_profile_screen.dart';
 import 'package:booking_app/calender_start-end_date.dart';
 import 'package:booking_app/Halls%20items/halls_item.dart';
 import 'package:booking_app/home_screen1.dart';
 import 'package:booking_app/main_screen.dart';
 import 'package:booking_app/settings.dart';
 import 'package:booking_app/sign_in.dart';
+import 'package:booking_app/sign_up.dart';
 import 'package:booking_app/testing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_floating_bottom_bar/flutter_floating_bottom_bar.dart';
@@ -30,8 +32,8 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => MyHomePage(title: "wajih"),
-        //  '/': (context) => const HomeScreen(),
+        '/': (context) => MyHomePage(title: 'wajih',)
+        //  '/': (context) => const HomeScreen(),2
       },
     );
   }
